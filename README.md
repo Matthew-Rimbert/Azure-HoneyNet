@@ -94,7 +94,7 @@ In this project, I constructed a mini honeynet within Microsoft Azure and integr
 ![image](https://github.com/Matthew-Rimbert/Azure-HoneyNet/assets/169205418/147ebe0e-9cb5-48fe-bac6-60a00b4a4a75)
 
 ### Additional Information
-Next, I will showcase screenshots where I deliberately trigger specific alerts. This will illustrate the additional security measures we have incorporated and demonstrate how each alert responds under controlled conditions.
+Next, I will showcase screenshots where I deliberately trigger specific alerts. This will illustrate the additional security measures incorporated and demonstrate how each alert responds under controlled conditions.
 It's important to mention that if there had been heavy usage by regular users within the network, it's probable that more security events and incidents would have been observed within this lab while in its vulnerable state.
 
 ![Privilege Escalation (Azure Key Vault)   Password Reset   Lateral Movement](https://github.com/Matthew-Rimbert/Azure-HoneyNet/assets/169205418/f13645ec-d74d-4a39-addd-c5c62655f708)
