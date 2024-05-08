@@ -12,7 +12,7 @@ In this project, I developed a mini honeynet in Azure, pulling in log sources fr
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
 ## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+![Punlic_internet](https://github.com/Matthew-Rimbert/Azure-HoneyNet/assets/169205418/65bdf527-0a26-48df-a2fd-597431a39534)
 
 The architecture of the mini honeynet in Azure consists of the following components:
 
@@ -84,7 +84,8 @@ The following table shows the metrics measured in the environment for another 24
 </div>
 
 ## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
+![hardening](https://github.com/Matthew-Rimbert/Azure-HoneyNet/assets/169205418/fc30d92d-9fcc-45fb-aa24-4b08b8c77e35)
+
 # Conclusion
 ```All map queries actually returned no results due to no instances of malicious activity for the 24-hour period after hardening.```
 
