@@ -1,5 +1,5 @@
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+![SOC png vpd](https://github.com/Matthew-Rimbert/Azure-HoneyNet/assets/169205418/4c7215d9-c0f8-4f06-b649-00ec2a661739)
 
 # Introduction
 
@@ -51,7 +51,7 @@ The architecture of the mini honeynet in Azure consists of the following compone
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
+The following table shows the metrics measured in the insecure environment for 24 hours:
 <div align="center">
   
 #### Start Time: May 1 2024 - 7:00:00 AM 
@@ -68,7 +68,7 @@ The following table shows the metrics we measured in our insecure environment fo
 
 ## Metrics After Hardening / Security Controls
 
-The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
+The following table shows the metrics measured in the environment for another 24 hours, but after the applied security controls:
 <div align="center">
   
 #### Start Time: May 6 2024 - 6:00:00 PM 
@@ -88,14 +88,16 @@ The following table shows the metrics we measured in our environment for another
 # Conclusion
 ```All map queries actually returned no results due to no instances of malicious activity for the 24-hour period after hardening.```
 
-In this project, we constructed a mini honeynet within Microsoft Azure and integrated log sources into a Log Analytics workspace. Microsoft Sentinel was used to generate alerts and incidents based on these logs. We also tracked metrics in an initially insecure environment, both before and after applying security measures. Notably, the application of security controls significantly reduced the number of security events and incidents, underscoring their effectiveness.
+In this project, I constructed a mini honeynet within Microsoft Azure and integrated log sources into a Log Analytics workspace. Microsoft Sentinel was used to generate alerts and incidents based on these logs. I also tracked metrics in an initially insecure environment, both before and after applying security measures. Notably, the application of security controls significantly reduced the number of security events and incidents, underscoring their effectiveness through hardening techniques through the <strong>NIST 800-53</strong> recommendations, common <strong>incident response life cycle</strong>, and custom <strong>playbooks</strong>/quick reaction checklists.
+
+![image](https://github.com/Matthew-Rimbert/Azure-HoneyNet/assets/169205418/147ebe0e-9cb5-48fe-bac6-60a00b4a4a75)
 
 ### Additional Information
 Next, I will showcase screenshots where I deliberately trigger specific alerts. This will illustrate the additional security measures we have incorporated and demonstrate how each alert responds under controlled conditions.
-It's important to mention that if there had been heavy usage by regular users within the network, it's probable that more security events and incidents would have been observed within this lab.
+It's important to mention that if there had been heavy usage by regular users within the network, it's probable that more security events and incidents would have been observed within this lab while in its vulnerable state.
 
 ![Privilege Escalation (Azure Key Vault)   Password Reset   Lateral Movement](https://github.com/Matthew-Rimbert/Azure-HoneyNet/assets/169205418/f13645ec-d74d-4a39-addd-c5c62655f708)
 
-1. Unauthorized Access to Key Vault: Triggers when there is unauthorized viewing of the global admin password stored in a Key Vault, which is restricted to a strict need-to-know basis.<br>
-2. Excessive Password Resets: Alerts are generated in cases of excessive password resets, a common method employed by threat actors aiming to establish backdoors through the creation of multiple compromised accounts.<br>
-3. Host Firewall Tampering: Monitors and alerts when modifications to firewall configurations exceed established security protocols, indicating potential unauthorized tampering
+1. <strong>Unauthorized Access to Key Vault</strong>: Triggers when there is unauthorized viewing of the global admin password stored in a Key Vault, which is restricted to a strict need-to-know basis.<br>
+2. <strong>Excessive Password Resets</strong>: Alerts are generated in cases of excessive password resets, a common method employed by threat actors aiming to establish backdoors through the creation of multiple compromised accounts.<br>
+3. <strong>Host Firewall Tampering</strong>: Monitors and alerts when modifications to firewall configurations exceed established security protocols, indicating potential unauthorized tampering
